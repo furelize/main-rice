@@ -14,21 +14,21 @@ sudo make clean install
 cd ../
 if [ ! -d /home/$(whoami)/.config/ ]
 then
-mkdir /home/$(whoami)/.config
-endif
+ mkdir /home/$(whoami)/.config
+fi
 if [ ! -d /home/$(whoami)/.config/rofi ]
 then
-mkdir /home/$(whoami)/.config/rofi
-endif
+ mkdir /home/$(whoami)/.config/rofi
+fi
 mv config.rasi /home/$(whoami)/.config/rofi/
 if [ ! -d /home/$(whoami)/.config/waybar ] 
 then
-mkdir /home/$(whoami)/.config/waybar
-endif
+ mkdir /home/$(whoami)/.config/waybar
+fi
 mv config style.css /home/$(whoami)/.config/waybar/
 if [ ! -d /home/$(whoami)/.config/hypr ] 
 then
-mkdir /home/$(whoami)/.config/hypr/
-endif
+ mkdir /home/$(whoami)/.config/hypr/
+fi
 mv hyprland.conf /home/$(whoami)/.config/hypr
 
