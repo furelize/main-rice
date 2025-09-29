@@ -1,0 +1,19 @@
+#!/bin/sh
+wallpaper=$(ls ~/Hämtningar/ | grep "png\|jpg\|gif" | rofi -dmenu)
+if [ "$wallpaper" == "" ]; then
+	exit
+fi
+mod=$(echo "${wallpaper:${#wallpaper}-3}")
+if [ "$mod" == "png" ] || [ "$mod" == "jpg" ]; then 
+	pkill hyprpaper
+	pkill swww-daemon
+	rm ~/.config/hypr/hyprpaper.conf
+	echo -e "ipc = off \npreload = ~/Hämtningar/$wallpaper \nwallpaper = eDP-1, ~/Hämtningar/$wallpaper \nwallpaper = DP-1, ~/Hämtningar/$wallpaper" > ~/.config/hypr/hyprpaper.conf
+	exec hyprpaper
+elif [ "$mod" == "gif" ]; then
+	pkill hyprpaper
+	swww-daemon
+	swww clear
+	exec swww img ~/Hämtningar/$wallpaper
+fi
+exit
