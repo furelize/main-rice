@@ -49,7 +49,7 @@
     "spacing": 20
   },
   "user": {
-    "format": " Kenny | ( {work_H}HR {work_M}M ) ",
+    "format": " Samuel | ( {work_H}HR {work_M}M ) ",
   },
   "clock": {
     "tooltip-format": " {:%A, %B %d, %Y} ",
