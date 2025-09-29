@@ -31,4 +31,5 @@ then
  mkdir /home/$(whoami)/.config/hypr/
 fi
 mv hyprland.conf /home/$(whoami)/.config/hypr
+mv wallchanger /bin
 
