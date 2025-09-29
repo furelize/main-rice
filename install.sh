@@ -2,7 +2,7 @@
 echo "easy install script for XFree86 based dynamic windowmanger dwm and hyprland"
 echo "only use in main rice directory!"
 sleep 2
-sudo pacman -Sy swww base-devel rofi waybar hyprland wayland hyprpaper bash-completion code thunderbird firefox neomutt ranger newsboat cava htop btop ttf-ubuntu-mono-nerd tmux
+sudo pacman -Sy swww base-devel rofi waybar hyprland wayland hyprpaper bash-completion code thunderbird firefox neomutt ranger newsboat cava htop btop ttf-ubuntu-mono-nerd tmux kitty vim
 cd st
 sudo make clean install
 cd ../dwm
